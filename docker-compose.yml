@@ -1,0 +1,20 @@
+version: "3.3"
+services:
+  pentaho-server-9:
+    image: pentaho-server-9
+    container_name: pentaho-server-9
+    hostname: pentaho-server-9
+    ports:
+      - "8081:8080"
+    volumes:
+      - type: volume
+        target: /opt/pentaho-server/pentaho-solutions/system
+    links: 
+      - mysql:mysql
+
+  mysql:
+    image: bd/condatos01
+    container_name: bd_condatos01
+    hostname: mysqlhost
+    expose:
+      - 3306

@@ -1,0 +1,40 @@
+1) CREACION IMAGEN PENTAHO-SERVER
+   ------------------------------
+
+Desde la carpeta donde esta el Dockerfile ejecutar:
+
+    docker build -t pentaho-server-9 .
+
+   Eso crea la imagen "pentaho-server-9"
+
+2) CREACION IMAGEN MYSQL+DW
+   ------------------------
+
+Luego estando dentro de la carpeta creacionDB ejecutar:
+
+    sudo docker build -t bd/condatos01 .
+
+   Eso crea la imagen "bd/condatos01" donde estará alojada la base de datos del DataWarehouse
+
+
+3) Luego ejecutar:
+
+    docker-compose up
+
+   (-d para ejecutarlo en segundo plano)
+
+   * ACLARACION:
+     ----------
+      Saque esto del docker-compose.yml, porque no permitía la ejecución del script docker-entrypoint-initdb.d
+
+        volumes:
+          # Montamos un volumen para MySQL para no perder los datos de bd
+          - ./volumenes/mysql:/var/lib/mysql
+ 
+
+--------------------------------------------------------------------
+Agregue el mysql connector 5.1.47
+
+Agregue tambien la regla para que el firewall le permita al docker acceder al puerto de mysql
+sudo ufw allow from 172.22.0.1 proto tcp to any port 3306
+
