@@ -31,6 +31,9 @@ Luego estando dentro de la carpeta creacionDB ejecutar:
           # Montamos un volumen para MySQL para no perder los datos de bd
           - ./volumenes/mysql:/var/lib/mysql
  
+4) Se creó el contenedor de Schema-Workbench, solo falta pasar el xml del cubo multidimensional ya hecho: Precios.xml 
+
+5) Al crear una nueva conexion con la base de datos desde Pentaho-Server, colocar como hostname: mysql
 
 --------------------------------------------------------------------
 Agregue el mysql connector 5.1.47
