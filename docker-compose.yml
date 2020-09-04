@@ -26,6 +26,7 @@ services:
     environment: 
         DISPLAY: $DISPLAY
     volumes: 
-      - /home/emanuel/Documents/IUA/Materias4to/BaseDatos2/conDocker/schemaWorkbench/conector:/schema-workbench/drivers
+      - ~/Documents/IUA/Materias4to/BaseDatos2/conDocker/conector:/schema-workbench/drivers
       - /tmp/.X11-unix:/tmp/.X11-unix
+      - ~/Documents/IUA/Materias4to/BaseDatos2/conDocker/CuboMulti/:/root
 
