@@ -17,12 +17,16 @@ Luego estando dentro de la carpeta creacionDB ejecutar:
    Eso crea la imagen "bd/condatos01" donde estará alojada la base de datos del DataWarehouse
 
 
-3) Luego ejecutar:
+3) Ingresar el siguiente comando, para poder acceder luego (como root) en forma gráfica al servidor de Schema-Workbench: 
+      " xhost +SI:localuser:root > /dev/null 2>&1 "
+
+4) Luego ejecutar (sino permite, hacerlo con sudo):
 
     docker-compose up
 
    (-d para ejecutarlo en segundo plano)
 
+---------------------------------------------
    * ACLARACION:
      ----------
       Saque esto del docker-compose.yml, porque no permitía la ejecución del script docker-entrypoint-initdb.d
@@ -30,14 +34,40 @@ Luego estando dentro de la carpeta creacionDB ejecutar:
         volumes:
           # Montamos un volumen para MySQL para no perder los datos de bd
           - ./volumenes/mysql:/var/lib/mysql
- 
-4) Se creó el contenedor de Schema-Workbench, solo falta pasar el xml del cubo multidimensional ya hecho: Precios.xml 
+--------------------------------------------------
 
-5) Al crear una nueva conexion con la base de datos desde Pentaho-Server, colocar como hostname: mysql
+5) Luego de levantar los tres contenedores, nos dirigimos hacia http://localhost:8081/ para acceder al servidor pentaho, entramos como administradores. 
+    Una vez dentro creamos una nueva conexión con la base de datos, en Manage Data Source:
+          Source Type: Database Table, cliqueamos sobre el signo "+" y configuramos la conexión con la BD:
+        
+          mysql
+          Connection name: nueva         
+          hostname: mysql
+          Database name: dataW
+          Port Number: 3306
+          nombre de la conexión: nueva
+          username: root
+          password: root
 
---------------------------------------------------------------------
-Agregue el mysql connector 5.1.47
+          Luego testeamos la conexion, nos deberia dar exitosa
+          Le damos ok, verificamos que aparezca la conexion creada y pulsamos en Cancelar
 
-Agregue tambien la regla para que el firewall le permita al docker acceder al puerto de mysql
-sudo ufw allow from 172.22.0.1 proto tcp to any port 3306
+6) Luego de ese paso, nos dirigimos al marketplace e instalamos el pluging Pivot4J. Al finalizar nos pedirá que reiniciemos el servidor. 
+    Para lo cual regresamos a la terminal donde levantamos el docker-compose y oprimimos Ctrl+C. 
+      Aguardamos que se detengan los tres contenedores y luego le damos nuevamente a docker-compose up.
+        Una vez levantado verificamos en el server pentaho, que efectivamente se haya instalado el pluging.
 
+7) Como siguiente tarea, nos dirigimos a la interfaz grafica del Schema-Workbench y dentro del menú Options creamos una conexión con la base de datos, 
+    también le colocamos como nombre "nueva". Una vez creada, ingresamos la opcion File->Open, donde en la carpeta root estará Precios.xml, lo seleccionamos.
+      Para finalizar nos vamos a la opción "publish" para publicar el cubo multidimensional en el servidor pentaho, lo configuramos así:
+
+        Server-URL: http://pentaho-server-9:8080/pentaho/
+        User: Admin
+        Password: password
+        Pentaho or JNDI Data Source: nueva
+
+        Y luego de eso oprimimos en Publish
+
+8) Listo, ya esta publicado en el servidor pentaho, para confirmarlo nos dirigimos al browser e ingresamos en las opciones File -->"Pivot4J View" y ya podremos seleccionar el cubo "Precios"
+
+9) Ahora lo que queda es realizar los tableros y verificar porque no se pueden visualizar los datos.
