@@ -5,6 +5,7 @@ RUN unzip pentaho-server-ce-9.0.0.0-423.zip && \
     mv pentaho-server /opt/ && \
     rm pentaho-server-ce-9.0.0.0-423.zip
 COPY ./conector/mysql-connector-java-5.1.47.jar /opt/pentaho-server/tomcat/lib/
+COPY ./CuboMulti/Precios.xml /opt/pentaho-server/tomcat/webapps/pentaho-style/WEB-INF/
 RUN rm /opt/pentaho-server/promptuser.sh
 RUN echo -e "\ntail -f /opt/pentaho-server/tomcat/logs/catalina.out" >> /opt/pentaho-server/start-pentaho.sh
 ENTRYPOINT /opt/pentaho-server/start-pentaho.sh

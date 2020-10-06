@@ -1,50 +1,50 @@
 <Schema name="Precios">
   <Cube name="CuboPrecios" visible="true" cache="true" enabled="true">
-    <Table name="factPrecio">
+    <Table name="Preciofact">
     </Table>
     <Dimension type="StandardDimension" visible="true" foreignKey="idBandera" highCardinality="false" name="bandera">
-      <Hierarchy name="Jbandera" visible="true" hasAll="true">
+      <Hierarchy name="Jbandera" visible="true" hasAll="true" primaryKey="idBandera">
         <Table name="dimBandera">
         </Table>
-        <Level name="nombre" visible="true" table="dimBandera" column="bandera" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="nombre" visible="true" column="bandera" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
       </Hierarchy>
     </Dimension>
     <Dimension type="StandardDimension" visible="true" foreignKey="idCombustible" highCardinality="false" name="combustible">
-      <Hierarchy name="Jcombustible" visible="true" hasAll="true">
+      <Hierarchy name="Jcombustible" visible="true" hasAll="true" primaryKey="idCombustible">
         <Table name="dimCombustible">
         </Table>
-        <Level name="tipo" visible="true" table="dimCombustible" column="tipo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="nombre" visible="true" column="tipo" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
       </Hierarchy>
     </Dimension>
-    <Dimension type="StandardDimension" visible="true" foreignKey="idTiempo" highCardinality="false" name="tiempo">
-      <Hierarchy name="Jtiempo" visible="true" hasAll="true">
+    <Dimension type="TimeDimension" visible="true" foreignKey="idTiempo" highCardinality="false" name="tiempo">
+      <Hierarchy name="porfecha" visible="true" hasAll="true" primaryKey="idTiempo">
         <Table name="dimTiempo">
         </Table>
-        <Level name="anio" visible="true" table="dimTiempo" column="anio" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="anio" visible="true" column="anio" type="Integer" uniqueMembers="true" levelType="TimeYears" hideMemberIf="Never">
         </Level>
-        <Level name="semestre" visible="true" table="dimTiempo" column="semestre" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+        <Level name="semestre" visible="true" column="semestre" type="String" uniqueMembers="false" levelType="TimeHalfYears" hideMemberIf="Never">
         </Level>
-        <Level name="trimestre" visible="true" table="dimTiempo" column="trimestre" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="trimestre" visible="true" column="trimestre" type="String" uniqueMembers="false" levelType="TimeQuarters" hideMemberIf="Never">
         </Level>
-        <Level name="mes" visible="true" table="dimTiempo" column="mes" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="mes" visible="true" column="mes" type="String" uniqueMembers="false" levelType="TimeMonths" hideMemberIf="Never">
         </Level>
       </Hierarchy>
     </Dimension>
     <Dimension type="StandardDimension" visible="true" foreignKey="idUbicacion" highCardinality="false" name="ubicacion">
-      <Hierarchy name="Jubicacion" visible="true" hasAll="true">
+      <Hierarchy name="porZona" visible="true" hasAll="true" primaryKey="idUbicacion">
         <Table name="dimUbicacion">
         </Table>
-        <Level name="provincia" visible="true" table="dimUbicacion" column="provincia" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="provincia" visible="true" column="provincia" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
       </Hierarchy>
     </Dimension>
-    <Measure name="PromedioCombustible" column="precio_combustible_promedio" aggregator="avg" visible="true">
+    <Measure name="PromedioCombustible" column="precio_combustible" datatype="Numeric" aggregator="avg" visible="true">
     </Measure>
-    <Measure name="dolar" column="precio_dolar_promedio" aggregator="sum" visible="true">
+    <Measure name="dolar" column="precio_dolar" datatype="Numeric" aggregator="avg" visible="true">
     </Measure>
-    <Measure name="combustible-dolar" column="brecha_combustible_dolar" aggregator="sum" visible="true">
+    <Measure name="combustible-dolar" column="brecha_dolar_combustible" datatype="Numeric" aggregator="avg" visible="true">
     </Measure>
   </Cube>
 </Schema>

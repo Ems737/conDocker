@@ -1,82 +1,127 @@
-2020-09-05 18:57:48,494 INFO  [mondrian.olap.MondrianProperties] Mondrian: properties loaded from 'file=/schema-workbench/mondrian.properties (exists=true)'
-2020-09-05 18:57:48,512 INFO  [mondrian.olap.MondrianProperties] Mondrian: properties loaded from 'file:/schema-workbench/mondrian.properties'
-2020-09-05 18:57:48,512 INFO  [mondrian.olap.MondrianProperties] Mondrian: loaded 0 system properties
-2020-09-05 18:57:48,673 INFO  [org.apache.commons.vfs2.impl.StandardFileSystemManager] Using "/tmp/vfs_cache" as temporary files store.
-2020-09-05 18:59:55,899 INFO  [org.pentaho.ui.xul.swing.tags.SwingScript] Added new event handler: fragmentHandler
-2020-09-05 18:59:55,902 INFO  [org.pentaho.ui.xul.swing.tags.SwingScript] Added new event handler: dataHandler
-2020-09-05 18:59:55,980 INFO  [org.pentaho.ui.xul.swing.tags.SwingListbox] added swingListitem to model
-2020-09-05 18:59:55,980 INFO  [org.pentaho.ui.xul.swing.tags.SwingListbox] added swingListitem to model
-2020-09-05 18:59:55,980 INFO  [org.pentaho.ui.xul.swing.tags.SwingListbox] added swingListitem to model
-2020-09-05 18:59:55,980 INFO  [org.pentaho.ui.xul.swing.tags.SwingListbox] added swingListitem to model
-2020-09-05 18:59:55,981 INFO  [org.pentaho.ui.xul.swing.tags.SwingListbox] added swingListitem to model
-2020-09-05 19:00:30,121 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
-2020-09-05 19:00:30,157 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
-2020-09-05 19:00:30,157 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
-2020-09-05 19:00:30,157 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
-2020-09-05 19:00:30,157 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
-2020-09-05 19:00:30,157 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
-2020-09-05 19:00:30,157 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: setAllSchemas
-2020-09-05 19:00:30,157 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: setAllSchemas - tables with no schema name
-2020-09-05 19:00:30,158 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: Loading schema: 'null'
-2020-09-05 19:00:30,220 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
-2020-09-05 19:01:02,316 INFO  [mondrian.rolap.RolapUtil] Mondrian: JDBC driver org.gjt.mm.mysql.Driver loaded successfully
-2020-09-05 19:01:02,317 WARN  [mondrian.rolap.RolapUtil] Mondrian: Warning: JDBC driver sun.jdbc.odbc.JdbcOdbcDriver not found
-2020-09-05 19:01:02,317 WARN  [mondrian.rolap.RolapUtil] Mondrian: Warning: JDBC driver org.hsqldb.jdbcDriver not found
-2020-09-05 19:01:02,318 WARN  [mondrian.rolap.RolapUtil] Mondrian: Warning: JDBC driver oracle.jdbc.OracleDriver not found
-2020-09-05 19:01:02,318 INFO  [mondrian.rolap.RolapUtil] Mondrian: JDBC driver com.mysql.jdbc.Driver loaded successfully
-2020-09-05 19:01:02,350 INFO  [org.apache.commons.vfs2.impl.StandardFileSystemManager] Using "/tmp/vfs_cache" as temporary files store.
-2020-09-05 19:01:02,795 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
-2020-09-05 19:01:02,833 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
-2020-09-05 19:01:02,833 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
-2020-09-05 19:01:02,833 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
-2020-09-05 19:01:02,833 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
-2020-09-05 19:01:02,833 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
-2020-09-05 19:01:02,833 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: setAllSchemas
-2020-09-05 19:01:02,833 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: setAllSchemas - tables with no schema name
-2020-09-05 19:01:02,833 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: Loading schema: 'null'
-2020-09-05 19:01:02,849 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
-2020-09-05 19:01:02,980 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <factPrecio> in schema <null>
-2020-09-05 19:01:02,980 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
-2020-09-05 19:01:03,007 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
-2020-09-05 19:01:03,007 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
-2020-09-05 19:01:03,007 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
-2020-09-05 19:01:03,007 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
-2020-09-05 19:01:03,007 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
-2020-09-05 19:01:03,018 DEBUG [mondrian.gui.JdbcMetaData] got 7 columns
-2020-09-05 19:01:03,019 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
-2020-09-05 19:01:03,020 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <dimBandera> in schema <null>
-2020-09-05 19:01:03,020 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
-2020-09-05 19:01:03,045 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
-2020-09-05 19:01:03,045 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
-2020-09-05 19:01:03,045 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
-2020-09-05 19:01:03,045 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
-2020-09-05 19:01:03,045 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
-2020-09-05 19:01:03,048 DEBUG [mondrian.gui.JdbcMetaData] got 2 columns
-2020-09-05 19:01:03,048 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
-2020-09-05 19:01:03,049 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <dimCombustible> in schema <null>
-2020-09-05 19:01:03,049 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
-2020-09-05 19:01:03,078 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
-2020-09-05 19:01:03,078 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
-2020-09-05 19:01:03,079 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
-2020-09-05 19:01:03,079 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
-2020-09-05 19:01:03,079 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
-2020-09-05 19:01:03,083 DEBUG [mondrian.gui.JdbcMetaData] got 2 columns
-2020-09-05 19:01:03,083 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
-2020-09-05 19:01:03,084 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <dimTiempo> in schema <null>
-2020-09-05 19:01:03,084 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
-2020-09-05 19:01:03,123 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
-2020-09-05 19:01:03,123 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
-2020-09-05 19:01:03,123 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
-2020-09-05 19:01:03,123 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
-2020-09-05 19:01:03,123 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
-2020-09-05 19:01:03,129 DEBUG [mondrian.gui.JdbcMetaData] got 5 columns
-2020-09-05 19:01:03,129 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
-2020-09-05 19:01:03,130 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <dimUbicacion> in schema <null>
-2020-09-05 19:01:03,130 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
-2020-09-05 19:01:03,157 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
-2020-09-05 19:01:03,157 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
-2020-09-05 19:01:03,157 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
-2020-09-05 19:01:03,157 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
-2020-09-05 19:01:03,157 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
-2020-09-05 19:01:03,160 DEBUG [mondrian.gui.JdbcMetaData] got 2 columns
-2020-09-05 19:01:03,161 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
+2020-10-06 13:38:07,434 INFO  [mondrian.olap.MondrianProperties] Mondrian: properties loaded from 'file=/schema-workbench/mondrian.properties (exists=true)'
+2020-10-06 13:38:07,446 INFO  [mondrian.olap.MondrianProperties] Mondrian: properties loaded from 'file:/schema-workbench/mondrian.properties'
+2020-10-06 13:38:07,446 INFO  [mondrian.olap.MondrianProperties] Mondrian: loaded 0 system properties
+2020-10-06 13:38:07,567 INFO  [org.apache.commons.vfs2.impl.StandardFileSystemManager] Using "/tmp/vfs_cache" as temporary files store.
+2020-10-06 13:40:20,986 INFO  [mondrian.rolap.RolapUtil] Mondrian: JDBC driver org.gjt.mm.mysql.Driver loaded successfully
+2020-10-06 13:40:20,987 WARN  [mondrian.rolap.RolapUtil] Mondrian: Warning: JDBC driver sun.jdbc.odbc.JdbcOdbcDriver not found
+2020-10-06 13:40:20,987 WARN  [mondrian.rolap.RolapUtil] Mondrian: Warning: JDBC driver org.hsqldb.jdbcDriver not found
+2020-10-06 13:40:20,987 WARN  [mondrian.rolap.RolapUtil] Mondrian: Warning: JDBC driver oracle.jdbc.OracleDriver not found
+2020-10-06 13:40:20,987 INFO  [mondrian.rolap.RolapUtil] Mondrian: JDBC driver com.mysql.jdbc.Driver loaded successfully
+2020-10-06 13:40:21,007 INFO  [org.apache.commons.vfs2.impl.StandardFileSystemManager] Using "/tmp/vfs_cache" as temporary files store.
+2020-10-06 13:40:21,916 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
+2020-10-06 13:40:21,960 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
+2020-10-06 13:40:21,960 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
+2020-10-06 13:40:21,960 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
+2020-10-06 13:40:21,960 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
+2020-10-06 13:40:21,960 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
+2020-10-06 13:40:21,960 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: setAllSchemas
+2020-10-06 13:40:21,960 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: setAllSchemas - tables with no schema name
+2020-10-06 13:40:21,961 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: Loading schema: 'null'
+2020-10-06 13:40:21,997 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
+2020-10-06 13:40:22,164 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <Preciofact> in schema <null>
+2020-10-06 13:40:22,164 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
+2020-10-06 13:40:22,202 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
+2020-10-06 13:40:22,202 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
+2020-10-06 13:40:22,202 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
+2020-10-06 13:40:22,202 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
+2020-10-06 13:40:22,202 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
+2020-10-06 13:40:22,216 DEBUG [mondrian.gui.JdbcMetaData] got 7 columns
+2020-10-06 13:40:22,217 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
+2020-10-06 13:40:22,217 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <dimBandera> in schema <null>
+2020-10-06 13:40:22,217 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
+2020-10-06 13:40:22,249 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
+2020-10-06 13:40:22,249 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
+2020-10-06 13:40:22,249 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
+2020-10-06 13:40:22,249 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
+2020-10-06 13:40:22,249 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
+2020-10-06 13:40:22,253 DEBUG [mondrian.gui.JdbcMetaData] got 2 columns
+2020-10-06 13:40:22,253 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
+2020-10-06 13:40:22,253 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <dimCombustible> in schema <null>
+2020-10-06 13:40:22,253 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
+2020-10-06 13:40:22,287 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
+2020-10-06 13:40:22,287 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
+2020-10-06 13:40:22,287 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
+2020-10-06 13:40:22,287 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
+2020-10-06 13:40:22,287 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
+2020-10-06 13:40:22,291 DEBUG [mondrian.gui.JdbcMetaData] got 2 columns
+2020-10-06 13:40:22,291 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
+2020-10-06 13:40:22,292 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <dimTiempo> in schema <null>
+2020-10-06 13:40:22,292 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
+2020-10-06 13:40:22,329 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
+2020-10-06 13:40:22,329 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
+2020-10-06 13:40:22,329 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
+2020-10-06 13:40:22,329 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
+2020-10-06 13:40:22,329 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
+2020-10-06 13:40:22,334 DEBUG [mondrian.gui.JdbcMetaData] got 5 columns
+2020-10-06 13:40:22,334 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
+2020-10-06 13:40:22,334 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <dimUbicacion> in schema <null>
+2020-10-06 13:40:22,334 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
+2020-10-06 13:40:22,361 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
+2020-10-06 13:40:22,361 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
+2020-10-06 13:40:22,361 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
+2020-10-06 13:40:22,361 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
+2020-10-06 13:40:22,361 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
+2020-10-06 13:40:22,364 DEBUG [mondrian.gui.JdbcMetaData] got 2 columns
+2020-10-06 13:40:22,365 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
+2020-10-06 13:40:42,518 INFO  [org.pentaho.ui.xul.swing.tags.SwingScript] Added new event handler: fragmentHandler
+2020-10-06 13:40:42,522 INFO  [org.pentaho.ui.xul.swing.tags.SwingScript] Added new event handler: dataHandler
+2020-10-06 13:40:42,565 INFO  [org.pentaho.ui.xul.swing.tags.SwingListbox] added swingListitem to model
+2020-10-06 13:40:42,566 INFO  [org.pentaho.ui.xul.swing.tags.SwingListbox] added swingListitem to model
+2020-10-06 13:40:42,566 INFO  [org.pentaho.ui.xul.swing.tags.SwingListbox] added swingListitem to model
+2020-10-06 13:40:42,566 INFO  [org.pentaho.ui.xul.swing.tags.SwingListbox] added swingListitem to model
+2020-10-06 13:40:42,566 INFO  [org.pentaho.ui.xul.swing.tags.SwingListbox] added swingListitem to model
+2020-10-06 13:40:50,367 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
+2020-10-06 13:40:50,407 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
+2020-10-06 13:40:50,407 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
+2020-10-06 13:40:50,407 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
+2020-10-06 13:40:50,407 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
+2020-10-06 13:40:50,407 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
+2020-10-06 13:40:50,407 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: setAllSchemas
+2020-10-06 13:40:50,407 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: setAllSchemas - tables with no schema name
+2020-10-06 13:40:50,407 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: Loading schema: 'null'
+2020-10-06 13:40:50,425 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
+2020-10-06 13:40:50,428 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <Preciofact> in schema <null>
+2020-10-06 13:40:50,428 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
+2020-10-06 13:40:50,456 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
+2020-10-06 13:40:50,456 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
+2020-10-06 13:40:50,456 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
+2020-10-06 13:40:50,456 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
+2020-10-06 13:40:50,456 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
+2020-10-06 13:40:50,460 DEBUG [mondrian.gui.JdbcMetaData] got 7 columns
+2020-10-06 13:40:50,460 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
+2020-10-06 13:40:50,460 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <dimBandera> in schema <null>
+2020-10-06 13:40:50,460 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
+2020-10-06 13:40:50,486 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
+2020-10-06 13:40:50,486 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
+2020-10-06 13:40:50,486 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
+2020-10-06 13:40:50,486 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
+2020-10-06 13:40:50,486 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
+2020-10-06 13:40:50,490 DEBUG [mondrian.gui.JdbcMetaData] got 2 columns
+2020-10-06 13:40:50,491 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
+2020-10-06 13:40:50,491 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <dimCombustible> in schema <null>
+2020-10-06 13:40:50,491 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
+2020-10-06 13:40:50,517 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
+2020-10-06 13:40:50,517 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
+2020-10-06 13:40:50,518 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
+2020-10-06 13:40:50,518 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
+2020-10-06 13:40:50,518 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
+2020-10-06 13:40:50,521 DEBUG [mondrian.gui.JdbcMetaData] got 2 columns
+2020-10-06 13:40:50,521 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
+2020-10-06 13:40:50,521 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <dimTiempo> in schema <null>
+2020-10-06 13:40:50,521 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
+2020-10-06 13:40:50,552 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
+2020-10-06 13:40:50,552 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
+2020-10-06 13:40:50,552 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
+2020-10-06 13:40:50,552 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
+2020-10-06 13:40:50,552 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
+2020-10-06 13:40:50,555 DEBUG [mondrian.gui.JdbcMetaData] got 5 columns
+2020-10-06 13:40:50,555 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
+2020-10-06 13:40:50,556 DEBUG [mondrian.gui.JdbcMetaData] setColumns: <dimUbicacion> in schema <null>
+2020-10-06 13:40:50,556 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection
+2020-10-06 13:40:50,582 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection OPEN
+2020-10-06 13:40:50,582 DEBUG [mondrian.gui.JdbcMetaData] Catalog name = dataW
+2020-10-06 13:40:50,582 DEBUG [mondrian.gui.JdbcMetaData] Database Product Name: MySQL
+2020-10-06 13:40:50,582 DEBUG [mondrian.gui.JdbcMetaData] Database Product Version: 5.7.31
+2020-10-06 13:40:50,582 DEBUG [mondrian.gui.JdbcMetaData] JdbcMetaData: initConnection - no error
+2020-10-06 13:40:50,584 DEBUG [mondrian.gui.JdbcMetaData] got 2 columns
+2020-10-06 13:40:50,584 DEBUG [mondrian.gui.JdbcMetaData] JDBC connection CLOSE
