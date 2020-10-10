@@ -1,0 +1,3 @@
+Con el script CreacionDW creamos a partir de la BD Intermedia, la BD dataWarehouse
+
+Esto no es necesario descargarlo para el proyecto, ya que la carpeta "creacionDB" ya tiene el dataWarehouse creado
