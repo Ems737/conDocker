@@ -80,7 +80,7 @@ select
 	(year(Precio.fecha)*10000 + month(Precio.fecha)*100 + day(Precio.fecha)) as idTiempo,
 	Precio.precio_combustible,
     Precio.precio_dolar,
-    truncate(Precio.precio_combustible - Precio.precio_dolar,2) as brecha_dolar_combustible
+    truncate(Precio.precio_dolar - Precio.precio_combustible,2) as brecha_dolar_combustible
 from Precio 
 inner join Combustible on Precio.idCombustible = Combustible.idCombustible 
 inner join Bandera on Precio.idBandera = Bandera.idBandera
