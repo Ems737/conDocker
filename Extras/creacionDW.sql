@@ -39,6 +39,23 @@ order by
 ALTER TABLE `dataW`.`dimTiempo` 
 CHANGE COLUMN `idTiempo` `idTiempo` BIGINT NOT NULL ,
 ADD PRIMARY KEY (`idTiempo`);
+
+/*Verificar esto si no funciona, ya que la columna nmes debe existir para ordenar los meses*/
+ALTER TABLE `dataW`.`dimTiempo` add column 'nmes'
+update TABLE `dataW`.`dimTiempo` set nmes = 1 where mes = 'Enero'
+update TABLE `dataW`.`dimTiempo` set nmes = 2 where mes = 'Febrero'
+update TABLE `dataW`.`dimTiempo` set nmes = 3 where mes = 'Marzo'
+update TABLE `dataW`.`dimTiempo` set nmes = 4 where mes = 'Abril'
+update TABLE `dataW`.`dimTiempo` set nmes = 5 where mes = 'Mayo'
+update TABLE `dataW`.`dimTiempo` set nmes = 6 where mes = 'Junio'
+update TABLE `dataW`.`dimTiempo` set nmes = 7 where mes = 'Julio'
+update TABLE `dataW`.`dimTiempo` set nmes = 8 where mes = 'Agosto'
+update TABLE `dataW`.`dimTiempo` set nmes = 9 where mes = 'Septiembre'
+update TABLE `dataW`.`dimTiempo` set nmes = 10 where mes = 'Octubre'
+update TABLE `dataW`.`dimTiempo` set nmes = 11 where mes = 'Noviembre'
+update TABLE `dataW`.`dimTiempo` set nmes = 12 where mes = 'Diciembre'
+/*---------------------------------------------------------------------------------------*/
+
 -- --------------------------------------------------------
 drop table if exists dataW.dimCombustible;
 create table dataW.dimCombustible as 
