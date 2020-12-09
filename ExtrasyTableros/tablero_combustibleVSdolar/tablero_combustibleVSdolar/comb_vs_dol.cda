@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="DS_combVSdol_AnioMesTipo" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="DS_meses" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="DS_anios" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="DS_TipoComb_AnioMes" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="DS_combVSdol_AnioMesTipo"
+               id="DS_combVSdol_AnioMesTipo"
+               type="sql">
+      <Name>DS_combVSdol_AnioMesTipo</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="ParamAnio" name="ParamAnio" type="Integer"/>
+         <Parameter default="ParamMeses" name="ParamMeses" type="IntegerArray"/>
+         <Parameter default="ParamTipoCombustible" name="ParamTipoCombustible" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select t.nmes, round(avg(pf.precio_combustible),2) Combustible, round(avg(pf.precio_dolar),2) Dolar
+from Preciofact pf
+inner join dimTiempo t on pf.idTiempo=t.idTiempo
+inner join dimCombustible c on pf.idCombustible=c.idCombustible
+where t.anio = ${ParamAnio} AND
+      t.nmes IN (${ParamMeses}) AND
+      c.tipo = ${ParamTipoCombustible}
+group by t.nmes;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="DS_meses" id="DS_meses" type="sql">
+      <Name>DS_meses</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select distinct nmes, mes from dimTiempo order by nmes;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="DS_anios" id="DS_anios" type="sql">
+      <Name>DS_anios</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[select distinct anio from dimTiempo;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="DS_TipoComb_AnioMes" id="DS_TipoComb_AnioMes"
+               type="sql">
+      <Name>DS_TipoComb_AnioMes</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="ParamAnio" name="ParamAnio" type="Integer"/>
+         <Parameter default="ParamMeses" name="ParamMeses" type="IntegerArray"/>
+      </Parameters>
+      <Query><![CDATA[select c.tipo, round(avg(pf.precio_combustible),2) Combustible, round(avg(pf.precio_dolar),2) Dolar
+from Preciofact pf
+inner join dimCombustible c on pf.idCombustible = c.idCombustible
+inner join dimTiempo t on pf.idTiempo = t.idTiempo
+where t.anio = ${ParamAnio} AND
+      t.nmes IN (${ParamMeses})
+group by c.tipo;]]></Query>
+   </DataAccess>
+</CDADescriptor>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
+    <ExportManifestInformation exportDate="16-10-2020 02:09:37 GMT" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestEntity path="PromComb">
+        <ExportManifestProperty>
+            <EntityMetaData name="PromComb" createdDate="2020-10-12T23:00:08.183Z" isFolder="true" path="PromComb" isHidden="false" isSchedulable="true" locale="es_ES" title="PromComb"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="PromComb/tablero1.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="tablero1.cda" createdDate="2020-10-13T04:36:35.303Z" isFolder="false" path="PromComb/tablero1.cda" isHidden="false" isSchedulable="true" locale="es_ES" title="tablero1.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="PromComb/tablero1.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="tablero1.cdfde" createdDate="2020-10-13T04:36:35.338Z" isFolder="false" path="PromComb/tablero1.cdfde" isHidden="false" isSchedulable="true" locale="es_ES" title="tablero1.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="PromComb/tablero1.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="tablero1.wcdf" createdDate="2020-10-13T04:36:35.220Z" isFolder="false" path="PromComb/tablero1.wcdf" isHidden="false" isSchedulable="true" locale="es_ES" title="Promedio de precios por combustible"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+</ns2:ExportManifest>

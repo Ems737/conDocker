@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="selectAnio" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="selectProvincia" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="selectSemestre" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="DSComb_AnioSemProv" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="DSMesComb_AnioSemProv" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="DSTop5Provincias" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="selectAnio" id="selectAnio" type="sql">
+      <Name>selectAnio</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="2017" name="paramAnio" type="Integer"/>
+      </Parameters>
+      <Query><![CDATA[SELECT distinct anio FROM dataW.dimTiempo;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="selectProvincia" id="selectProvincia" type="sql">
+      <Name>selectProvincia</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="paramProvincia" name="paramProvincia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT distinct provincia FROM dataW.dimUbicacion;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="selectSemestre" id="selectSemestre" type="sql">
+      <Name>selectSemestre</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="paramSemestre" name="paramSemestre" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT distinct semestre FROM dataW.dimTiempo;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="DSComb_AnioSemProv" id="DSComb_AnioSemProv"
+               type="sql">
+      <Name>DSComb_AnioSemProv</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="paramAnio" name="paramAnio" type="Integer"/>
+         <Parameter default="paramSemestre" name="paramSemestre" type="String"/>
+         <Parameter default="paramProvincia" name="paramProvincia" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT tipo, avg(Preciofact.precio_combustible) FROM dimCombustible
+inner join Preciofact on dimCombustible.idCombustible = Preciofact.idCombustible
+inner join dimTiempo on Preciofact.idTiempo = dimTiempo.idTiempo
+inner join dimUbicacion on Preciofact.idUbicacion = dimUbicacion.idUbicacion
+where dimTiempo.anio = ${paramAnio} 
+and dimTiempo.semestre = ${paramSemestre} 
+and dimUbicacion.provincia = ${paramProvincia}
+group by tipo;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="DSMesComb_AnioSemProv" id="DSMesComb_AnioSemProv"
+               type="sql">
+      <Name>DSMesComb_AnioSemProv</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="paramAnio" name="paramAnio" type="Integer"/>
+         <Parameter default="paramSemestre" name="paramSemestre" type="String"/>
+         <Parameter default="paramProvincia" name="paramProvincia" type="String"/>
+         <Parameter default="paramComb" name="paramComb" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT mes, avg(Preciofact.precio_combustible) FROM dimTiempo
+inner join Preciofact on dimTiempo.idTiempo = Preciofact.idTiempo
+inner join dimCombustible on Preciofact.idCombustible = dimCombustible.idCombustible
+inner join dimUbicacion on Preciofact.idUbicacion = dimUbicacion.idUbicacion
+where dimTiempo.anio = ${paramAnio} 
+and dimTiempo.semestre = ${paramSemestre} 
+and dimUbicacion.provincia = ${paramProvincia}
+and dimCombustible.tipo LIKE ${paramComb}
+group by mes, nmes
+order by dimTiempo.nmes;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="DSTop5Provincias" id="DSTop5Provincias" type="sql">
+      <Name>DSTop5Provincias</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="paramAnio" name="paramAnio" type="Integer"/>
+         <Parameter default="paramSemestre" name="paramSemestre" type="String"/>
+         <Parameter default="paramComb" name="paramComb" type="String"/>
+         <Parameter default="paramAnio" name="paramMes" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT provincia, avg(Preciofact.precio_combustible) pre FROM dimUbicacion
+inner join Preciofact on dimUbicacion.idUbicacion = Preciofact.idUbicacion
+inner join dimCombustible on Preciofact.idCombustible = dimCombustible.idCombustible
+inner join dimTiempo on Preciofact.idTiempo = dimTiempo.idTiempo
+where dimTiempo.anio = ${paramAnio} 
+and dimTiempo.semestre = ${paramSemestre}
+and dimCombustible.tipo = ${paramComb}
+and dimTiempo.mes = ${paramMes}
+group by dimUbicacion.provincia
+order by pre DESC
+LIMIT 5;]]></Query>
+   </DataAccess>
+</CDADescriptor>

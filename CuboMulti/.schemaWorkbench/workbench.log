@@ -1,4 +1,19 @@
-2020-10-10 21:59:12,395 INFO  [mondrian.olap.MondrianProperties] Mondrian: properties loaded from 'file=/schema-workbench/mondrian.properties (exists=true)'
-2020-10-10 21:59:12,407 INFO  [mondrian.olap.MondrianProperties] Mondrian: properties loaded from 'file:/schema-workbench/mondrian.properties'
-2020-10-10 21:59:12,407 INFO  [mondrian.olap.MondrianProperties] Mondrian: loaded 0 system properties
-2020-10-10 21:59:12,518 INFO  [org.apache.commons.vfs2.impl.StandardFileSystemManager] Using "/tmp/vfs_cache" as temporary files store.
+2020-12-09 12:16:34,467 ERROR [mondrian.gui.Workbench] main
+java.awt.AWTError: Can't connect to X11 window server using ':0.0' as the value of the DISPLAY variable.
+	at sun.awt.X11GraphicsEnvironment.initDisplay(Native Method)
+	at sun.awt.X11GraphicsEnvironment.access$200(X11GraphicsEnvironment.java:65)
+	at sun.awt.X11GraphicsEnvironment$1.run(X11GraphicsEnvironment.java:115)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.awt.X11GraphicsEnvironment.<clinit>(X11GraphicsEnvironment.java:74)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+	at java.awt.GraphicsEnvironment.createGE(GraphicsEnvironment.java:103)
+	at java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment(GraphicsEnvironment.java:82)
+	at java.awt.Window.initGC(Window.java:475)
+	at java.awt.Window.init(Window.java:495)
+	at java.awt.Window.<init>(Window.java:537)
+	at java.awt.Frame.<init>(Frame.java:420)
+	at java.awt.Frame.<init>(Frame.java:385)
+	at javax.swing.JFrame.<init>(JFrame.java:189)
+	at mondrian.gui.Workbench.<init>(Workbench.java:121)
+	at mondrian.gui.Workbench.main(Workbench.java:2150)

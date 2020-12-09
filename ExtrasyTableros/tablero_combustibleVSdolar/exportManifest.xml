@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
+    <ExportManifestInformation exportDate="13-10-2020 11:17:34 GMT" exportBy="admin" rootFolder="/public/bd2_final/" manifestVersion="2"/>
+    <ExportManifestEntity path="tablero_combustibleVSdolar">
+        <ExportManifestProperty>
+            <EntityMetaData name="tablero_combustibleVSdolar" createdDate="2020-10-11T02:33:00.369Z" isFolder="true" path="tablero_combustibleVSdolar" isHidden="false" isSchedulable="true" locale="en_US" title="tablero_combustibleVSdolar"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="tablero_combustibleVSdolar/comb_vs_dol.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="comb_vs_dol.cda" createdDate="2020-10-12T03:09:45.994Z" isFolder="false" path="tablero_combustibleVSdolar/comb_vs_dol.cda" isHidden="false" isSchedulable="true" locale="en_US" title="comb_vs_dol.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="tablero_combustibleVSdolar/comb_vs_dol.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="comb_vs_dol.cdfde" createdDate="2020-10-11T02:34:45.404Z" isFolder="false" path="tablero_combustibleVSdolar/comb_vs_dol.cdfde" isHidden="false" isSchedulable="true" locale="en_US" title="comb_vs_dol.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="tablero_combustibleVSdolar/comb_vs_dol.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="comb_vs_dol.wcdf" createdDate="2020-10-11T02:34:45.375Z" isFolder="false" path="tablero_combustibleVSdolar/comb_vs_dol.wcdf" isHidden="false" isSchedulable="true" locale="en_US" description="Comparacion del precio del combustible con el del dolar" title="Combustible_vs_Dolar"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+</ns2:ExportManifest>

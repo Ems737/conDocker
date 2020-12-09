@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
+    <ExportManifestInformation exportDate="16-10-2020 02:09:45 GMT" exportBy="admin" rootFolder="/public/" manifestVersion="2"/>
+    <ExportManifestEntity path="ComparaBanderas">
+        <ExportManifestProperty>
+            <EntityMetaData name="ComparaBanderas" createdDate="2020-10-13T21:39:34.552Z" isFolder="true" path="ComparaBanderas" isHidden="false" isSchedulable="true" locale="es_ES" title="ComparaBanderas"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="ComparaBanderas/TableroBanderas.cda">
+        <ExportManifestProperty>
+            <EntityMetaData name="TableroBanderas.cda" createdDate="2020-10-13T22:45:02.173Z" isFolder="false" path="ComparaBanderas/TableroBanderas.cda" isHidden="false" isSchedulable="true" locale="es_ES" title="TableroBanderas.cda"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="ComparaBanderas/TableroBanderas.cdfde">
+        <ExportManifestProperty>
+            <EntityMetaData name="TableroBanderas.cdfde" createdDate="2020-10-13T21:46:31.279Z" isFolder="false" path="ComparaBanderas/TableroBanderas.cdfde" isHidden="false" isSchedulable="true" locale="es_ES" title="TableroBanderas.cdfde"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+    <ExportManifestEntity path="ComparaBanderas/TableroBanderas.wcdf">
+        <ExportManifestProperty>
+            <EntityMetaData name="TableroBanderas.wcdf" createdDate="2020-10-13T21:46:31.218Z" isFolder="false" path="ComparaBanderas/TableroBanderas.wcdf" isHidden="false" isSchedulable="true" locale="es_ES" description="TableroBanderas" title="Bandera con mayor presencia en el pais"/>
+        </ExportManifestProperty>
+        <ExportManifestProperty>
+            <EntityAcl>
+                <entriesInheriting>true</entriesInheriting>
+                <owner>admin</owner>
+                <ownerType>USER</ownerType>
+            </EntityAcl>
+        </ExportManifestProperty>
+    </ExportManifestEntity>
+</ns2:ExportManifest>

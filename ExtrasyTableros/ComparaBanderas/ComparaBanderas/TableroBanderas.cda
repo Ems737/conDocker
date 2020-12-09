@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDADescriptor>
+   <DataSources>
+      <Connection id="selecAnio" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="selecCombustible" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="selecBandera_1" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="selecBandera_2" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="provinciasPorBandera" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="evolucionBanderas_01" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+      <Connection id="evolucionBanderas_02" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
+   </DataSources>
+   <DataAccess access="public" connection="selecAnio" id="selecAnio" type="sql">
+      <Name>selecAnio</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="2017" name="paramAnio" type="Integer"/>
+      </Parameters>
+      <Query><![CDATA[SELECT distinct anio FROM dataW.dimTiempo;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="selecCombustible" id="selecCombustible" type="sql">
+      <Name>selecCombustible</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="paramCombustible" name="paramCombustible" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT distinct tipo FROM dataW.dimCombustible;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="selecBandera_1" id="selecBandera_1" type="sql">
+      <Name>selecBandera_1</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="paramBandera_1" name="paramBandera_1" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT distinct bandera FROM dataW.dimBandera;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="selecBandera_2" id="selecBandera_2" type="sql">
+      <Name>selecBandera_2</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="paramBandera_2" name="paramBandera_2" type="String"/>
+      </Parameters>
+      <Query><![CDATA[SELECT distinct bandera FROM dataW.dimBandera;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="provinciasPorBandera" id="provinciasPorBandera"
+               type="sql">
+      <Name>provinciasPorBandera</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters/>
+      <Query><![CDATA[SELECT dimBandera.bandera, count(distinct provincia)
+FROM dimUbicacion 
+INNER JOIN Preciofact ON dimUbicacion.idUbicacion = Preciofact.idUbicacion
+INNER JOIN dimBandera ON dimBandera.idBandera = Preciofact.idBandera
+WHERE Preciofact.idUbicacion = dimUbicacion.idUbicacion
+group by dimBandera.bandera
+order by count(distinct provincia) DESC
+LIMIT 10;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="evolucionBanderas_01" id="evolucionBanderas_01"
+               type="sql">
+      <Name>evolucionBanderas_01</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="paramAnio" name="paramAnio" type="Integer"/>
+         <Parameter default="paramCombustible" name="paramCombustible" type="String"/>
+         <Parameter default="paramBandera_1" name="paramBandera_1" type="String"/>
+         <Parameter default="paramBandera_2" name="paramBandera_2" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select t.nmes, avg(pf.precio_combustible) Combustible1
+    from Preciofact pf
+	inner join dimTiempo t on pf.idTiempo=t.idTiempo
+	inner join dimCombustible c on pf.idCombustible=c.idCombustible
+	inner join dimBandera b on pf.idBandera = b.idBandera
+	where t.anio = ${paramAnio} AND
+		c.tipo = ${paramCombustible} AND
+		b.bandera = ${paramBandera_1}
+	group by t.nmes
+    order by t.nmes;]]></Query>
+   </DataAccess>
+   <DataAccess access="public" connection="evolucionBanderas_02" id="evolucionBanderas_02"
+               type="sql">
+      <Name>evolucionBanderas_02</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="paramAnio" name="paramAnio" type="Integer"/>
+         <Parameter default="paramCombustible" name="paramCombustible" type="String"/>
+         <Parameter default="paramBandera_1" name="paramBandera_1" type="String"/>
+         <Parameter default="paramBandera_2" name="paramBandera_2" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select t.nmes, avg(pf.precio_combustible) Combustible1
+	from Preciofact pf
+	inner join dimTiempo t on pf.idTiempo=t.idTiempo
+	inner join dimCombustible c on pf.idCombustible=c.idCombustible
+	inner join dimBandera b on pf.idBandera = b.idBandera
+	where t.anio = ${paramAnio} AND
+		c.tipo = ${paramCombustible} AND
+		b.bandera = ${paramBandera_2}
+	group by t.nmes
+    order by t.nmes;]]></Query>
+   </DataAccess>
+</CDADescriptor>
