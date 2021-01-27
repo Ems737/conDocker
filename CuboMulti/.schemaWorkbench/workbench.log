@@ -1,4 +1,4 @@
-2021-01-07 01:42:03,143 ERROR [mondrian.gui.Workbench] main
+2021-01-27 12:55:23,878 ERROR [mondrian.gui.Workbench] main
 java.awt.AWTError: Can't connect to X11 window server using ':0.0' as the value of the DISPLAY variable.
 	at sun.awt.X11GraphicsEnvironment.initDisplay(Native Method)
 	at sun.awt.X11GraphicsEnvironment.access$200(X11GraphicsEnvironment.java:65)
