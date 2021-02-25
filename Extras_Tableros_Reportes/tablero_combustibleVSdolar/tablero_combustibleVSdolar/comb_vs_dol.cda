@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CDADescriptor>
    <DataSources>
+      <Connection id="DS_Brecha_AnioMesTipo" type="sql.jndi">
+         <Jndi>nueva</Jndi>
+      </Connection>
       <Connection id="DS_combVSdol_AnioMesTipo" type="sql.jndi">
          <Jndi>nueva</Jndi>
       </Connection>
@@ -14,6 +17,25 @@
          <Jndi>nueva</Jndi>
       </Connection>
    </DataSources>
+   <DataAccess access="public" connection="DS_Brecha_AnioMesTipo" id="DS_Brecha_AnioMesTipo"
+               type="sql">
+      <Name>DS_Brecha_AnioMesTipo</Name>
+      <Cache duration="3600" enabled="true"/>
+      <Columns/>
+      <Parameters>
+         <Parameter default="ParamAnio" name="ParamAnio" type="Integer"/>
+         <Parameter default="ParamMeses" name="ParamMeses" type="IntegerArray"/>
+         <Parameter default="ParamTipoCombustible" name="ParamTipoCombustible" type="String"/>
+      </Parameters>
+      <Query><![CDATA[select t.nmes, round(avg(pf.brecha_dolar_combustible),2) Brecha
+from Preciofact pf
+inner join dimTiempo t on pf.idTiempo=t.idTiempo
+inner join dimCombustible c on pf.idCombustible=c.idCombustible
+where t.anio = ${ParamAnio} AND
+      t.nmes IN (${ParamMeses}) AND
+      c.tipo = ${ParamTipoCombustible}
+group by t.nmes;]]></Query>
+   </DataAccess>
    <DataAccess access="public" connection="DS_combVSdol_AnioMesTipo"
                id="DS_combVSdol_AnioMesTipo"
                type="sql">

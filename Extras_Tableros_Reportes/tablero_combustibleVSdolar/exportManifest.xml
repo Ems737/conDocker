@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:ExportManifest xmlns:ns2="http://www.pentaho.com/schema/">
-    <ExportManifestInformation exportDate="13-10-2020 11:17:34 GMT" exportBy="admin" rootFolder="/public/bd2_final/" manifestVersion="2"/>
+    <ExportManifestInformation exportDate="23-02-2021 09:57:35 GMT" exportBy="admin" rootFolder="/public/bd2_final/" manifestVersion="2"/>
     <ExportManifestEntity path="tablero_combustibleVSdolar">
         <ExportManifestProperty>
             <EntityMetaData name="tablero_combustibleVSdolar" createdDate="2020-10-11T02:33:00.369Z" isFolder="true" path="tablero_combustibleVSdolar" isHidden="false" isSchedulable="true" locale="en_US" title="tablero_combustibleVSdolar"/>
